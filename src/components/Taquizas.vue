@@ -3,7 +3,7 @@ import NavBar from './NavBar.vue';
 import Footer from './Footer.vue';
 import Carousel2 from './Carousel2.vue';
 import ModalTaquizas from './ModalTaquizas.vue';
-import Servicios from './Servicios.vue';
+import RatingTaquiza from './RatingTaquiza.vue';
 
 </script>
 
@@ -27,41 +27,59 @@ import Servicios from './Servicios.vue';
 
                 <br>
                 <ModalTaquizas></ModalTaquizas>
-                
             </div>
-
             <div id="caru">
                 <Carousel2></Carousel2>
+           
             </div>
+            <div>
 
         </div>
-
-        <Footer/>
+        </div>
+        <h1>RESEÑAS</h1>
+        <br>
+        <RatingTaquiza/>
+        <Footer />
     </div>
 </template>
 
 <style>
 .title {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 0%;
     height: 60%;
+    min-width: auto;
+    max-height: auto;
+    
 }
 
-#taqui {
-    width: 80%;
-    height: auto;
-    margin-left: 10%;
-    align-items: stretch;
+#taqui, #caru {
+    flex: 1 1 50%; /* Ocupa el 50% del espacio disponible */
+    margin: 0 10px; /* Agrega un poco de espacio alrededor */
+}
+
+.app {
     margin-bottom: 0%;
+    min-width: auto;
+    max-height: auto;
 }
 
-.app{
-    margin-bottom:0%;
+@media (max-width: 768px) {
+    .title {
+        flex-direction: column;
+    }
 
+    #taqui, #caru {
+        flex: 1 1 100%; /* Ocupa el 100% del espacio disponible en pantallas pequeñas */
+        margin: 0 10px;
+    }
+
+    #taqui {
+        width: auto; /* Hace que #taqui ocupe el ancho disponible */
+        margin: 0; /* Elimina márgenes específicos para pantallas pequeñas */
+    }
 }
 
-#caru{
-    margin-bottom: 0%;
-}
+/* Puedes añadir más media queries aquí para manejar otros rangos de tamaño de pantalla, como para tablets o pantallas grandes */
 </style>
