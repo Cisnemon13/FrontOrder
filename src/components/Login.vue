@@ -11,7 +11,7 @@ import NavBar from './NavBar.vue';
         </div>
   
         <div class="forms">
-          <h1>Iniciar sesión</h1>
+          <h2>Iniciar sesión</h2>
   
           <div class="form">
             <label for="email">Correo Electrónico</label>
@@ -23,9 +23,9 @@ import NavBar from './NavBar.vue';
             <input id="password" type="password" placeholder="Contraseña" />
           </div>
   
-          <div class="button-container">
+   
             <b-button>Iniciar sesión</b-button>
-          </div>
+
   
           <div class="message">
             <label>¿No eres usuario? 
@@ -40,6 +40,19 @@ import NavBar from './NavBar.vue';
   <script setup>
   import NavBar from './NavBar.vue';
   </script>
+
+<script>
+export default {
+  data() {
+    return {
+      types: [
+        'email',
+        'password',
+      ]
+    }
+  }
+}
+</script>
   
   <style scoped>
   body,
@@ -63,29 +76,33 @@ import NavBar from './NavBar.vue';
   .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 10vh 15%;
+    margin: 7.5vh 15%;
     box-shadow: 10px 5px 5px rgba(109, 109, 109, 0.5); /* Consistent box-shadow formatting */
     border-radius: 20px;
+    height: 75vh;
   }
   
-  h1 {
+  h2 {
     font-family: 'Montserrat', sans-serif;
-    margin-top: 2.5vh;
-    margin-bottom: 5vh;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
     text-align: center; /* Center text within heading */
   }
   
   label {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 1.2rem;
     text-align: center; /* Align labels to the center */
-    margin-bottom: 2.5vh;
+    margin-bottom: 2vh;
   }
   
   .forms {
-    position: relative;
-    text-align: center; /* Center form elements horizontally */
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar los elementos hijos horizontalmente */
+  justify-content: center; /* Centrar los elementos hijos verticalmente */
+  padding: 2vh;
+}
   
   .form {
     margin-bottom: 2vh;
@@ -95,20 +112,24 @@ import NavBar from './NavBar.vue';
     width: 80%;
     height: 5vh;
     border-radius: 20px;
-    margin-bottom: 4vh;
+    margin-bottom: 1.5vh;
     border: 3px solid #AE0505; /* Consistent border color formatting */
   }
   
   .btn {
-    width: 50%;
-    height: 10vh;
-    background-color: #2D2A2A;
-    color: white;
-    border-radius: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    cursor: pointer; /* Indicate interactive element with cursor */
-  }
+  width: 50%; /* Tamaño del botón */
+  height: 10vh; /* Altura del botón */
+  background-color: #2D2A2A;
+  color: white;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  /* Remueve el margen de 1vh si quieres que el botón esté perfectamente centrado */
+  margin-top: 2vh; /* Espaciado superior del botón */
+  margin-bottom: 2vh; /* Espaciado inferior del botón */
+}
+
   
   .msg {
     color: #AE0505;
@@ -117,7 +138,12 @@ import NavBar from './NavBar.vue';
   .message {
     display: flex;
     justify-content: center;
-    margin-top: 5vh;
+    margin-top: 2.5vh;
+  }
+
+  img{
+    margin-bottom: 0;
+    height: 75vh;
   }
   </style>
   
