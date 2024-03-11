@@ -1,5 +1,5 @@
 <template>
-    <div id="mine2">
+    <div>
   <b-carousel
     id="carousel-2"
     style="text-shadow: 0px 0px 2px #000"
@@ -29,12 +29,10 @@
 
 <style>
 
-#mine2{
+#carousel-2{
     width: 80%;
-    height: 130vh;
+    height: 10vh;
     margin-left: 10%;
-    
-
-    
+    margin-bottom: 25%;
 }
 </style>

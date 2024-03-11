@@ -1,6 +1,6 @@
 <template>
     <div style="margin-left: auto">
-        <b-button v-b-modal.modal-1>Hacer Pedido</b-button>
+        <b-button v-b-modal.modal-1 variant="outline-primary" style="width: 25%;">Hacer Pedido</b-button>
         <b-modal id="modal-1" title="Información de Pedido" hide-footer @shown="clearErrors">
             <template #modal-header="{ close }">
                 <h5 style="color: #AE0505; margin-left: 25%;">Información de Pedido</h5>
@@ -141,6 +141,8 @@ export default {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    min-width: auto;
+    max-height: auto;
 }
 
 .buttonsContainer button {
@@ -151,44 +153,60 @@ export default {
     margin-bottom: 10px;
     margin-top: 10px;
     transition: width 0.3s;
+    min-width: auto;
+    max-height: auto;
 }
 
 .buttonsContainer button:hover {
     width: 35%;
+    min-width: auto;
+    max-height: auto;
 }
 
 #botonEnviar {
     background-color: rgb(32, 184, 40);
     color: white;
+    min-width: auto;
+    max-height: auto;
 }
 
 #botonCancelar {
     background-color: rgb(240, 51, 51);
     color: white;
+    min-width: auto;
+    max-height: auto;
 }
 
 #form {
     background-color: rgb(255, 255, 255);
     width: 100%;
     padding: 10px;
+    min-width: auto;
+    max-height: auto;
 }
 
 .fieldContainer {
     width: 100%;
     margin-bottom: 20px;
+    min-width: auto;
+    max-height: auto;
 }
 
 .labelContainer {
     margin-bottom: 10px;
+    min-width: auto;
+    max-height: auto;
 }
 
 .inputContainer {
-    width: 100%;
+    min-width: auto;
+    max-height: auto;
 }
 
 .inputContainer input {
     padding: 10px;
-    width: 100%;
+    min-width: auto;
+    max-height: auto;
     border: 2px solid #AE0505;
     border-radius: 10px;
     background-color: #f9f9f9;
@@ -202,7 +220,8 @@ export default {
 
 .inputContainer textarea {
     padding: 10px;
-    width: 100%;
+    min-width: auto;
+    max-height: auto;
     border: 2px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
@@ -212,11 +231,14 @@ export default {
 
 .inputContainer textarea:focus {
     border-color: #2b2b2b;
+    min-width: auto;
+    max-height: auto;
 }
 
 .inputContainer select {
     padding: 10px;
-    width: 100%;
+    min-width: auto;
+    max-height: auto;
     border: 2px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
@@ -226,5 +248,7 @@ export default {
 
 .inputContainer select:focus {
     border-color: #2b2b2b;
+    min-width: auto;
+    max-height: auto;
 }
 </style>
